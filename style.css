@@ -1,55 +1,71 @@
-/* General styles */
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     margin: 0;
     padding: 0;
-    background-color: #121212;
-    color: #fff;
+    background-color: #0d0d0d;
+    color: #33ff33;
     text-align: center;
 }
 
 /* Header */
 header {
-    background-color: #1f1f1f;
+    background-color: #111;
     padding: 20px;
     font-size: 24px;
+    border-bottom: 2px solid #33ff33;
 }
 
 /* Navigation */
-nav ul {
-    list-style: none;
-    padding: 0;
-    background-color: #333;
+nav {
+    background: #222;
+    padding: 10px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    border-bottom: 2px solid #33ff33;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 nav ul li {
-    margin: 5px;
+    margin: 5px 15px;
 }
 
 nav ul li a {
-    color: #fff;
+    color: #33ff33;
     text-decoration: none;
+    font-weight: bold;
     padding: 10px 15px;
+    background: #111;
+    border: 2px solid #33ff33;
     border-radius: 5px;
-    background: #444;
     transition: 0.3s;
+    display: block;
 }
 
 nav ul li a:hover {
-    background: #666;
+    background: #33ff33;
+    color: #111;
 }
 
-/* Section */
+/* Sections */
 section {
     padding: 30px;
+    border-bottom: 2px solid #33ff33;
 }
 
 h2 {
     margin-bottom: 20px;
     color: #ffcc00;
+    text-shadow: 0 0 5px #ffcc00;
 }
 
 /* Project Cards */
@@ -57,19 +73,27 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 15px;
+    padding: 10px;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .project {
-    background: #222;
-    margin: 15px;
+    background: #111;
     padding: 20px;
-    width: 250px;
+    width: 90%;
+    max-width: 250px;
+    border: 2px solid #33ff33;
     border-radius: 8px;
     transition: 0.3s;
+    box-sizing: border-box;
 }
 
 .project:hover {
     transform: scale(1.05);
+    background: #33ff33;
+    color: #111;
 }
 
 .project h3 {
@@ -91,26 +115,32 @@ h2 {
     width: 80%;
     max-width: 1000px;
     margin: 20px 0;
+    border: 2px solid #33ff33;
     border-radius: 10px;
 }
 
 /* Footer */
 footer {
     margin-top: 30px;
-    background-color: #1f1f1f;
+    background-color: #111;
     padding: 15px;
+    border-top: 2px solid #33ff33;
 }
 
-/* 🔹 Responsive Styles for Mobile */
+/* Responsive Styles */
 @media (max-width: 768px) {
     header {
         font-size: 20px;
         padding: 15px;
     }
 
-    nav ul {
+    nav {
         flex-direction: column;
         align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
     }
 
     nav ul li {
@@ -129,13 +159,5 @@ footer {
 
     #flow-video {
         width: 95%;
-    }
-
-    section {
-        padding: 20px;
-    }
-
-    footer {
-        padding: 10px;
     }
 }
