@@ -8,22 +8,25 @@ body {
     text-align: center;
 }
 
+/* Header */
 header {
     background-color: #1f1f1f;
     padding: 20px;
     font-size: 24px;
 }
 
+/* Navigation */
 nav ul {
     list-style: none;
     padding: 0;
     background-color: #333;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    margin: 10px;
+    margin: 5px;
 }
 
 nav ul li a {
@@ -39,7 +42,7 @@ nav ul li a:hover {
     background: #666;
 }
 
-/* Section styles */
+/* Section */
 section {
     padding: 30px;
 }
@@ -49,7 +52,7 @@ h2 {
     color: #ffcc00;
 }
 
-/* Project cards */
+/* Project Cards */
 .projects-container {
     display: flex;
     flex-wrap: wrap;
@@ -83,7 +86,7 @@ h2 {
     text-decoration: underline;
 }
 
-/* Video section */
+/* Video Section */
 #flow-video {
     width: 80%;
     max-width: 1000px;
@@ -96,4 +99,43 @@ footer {
     margin-top: 30px;
     background-color: #1f1f1f;
     padding: 15px;
+}
+
+/* 🔹 Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    header {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    #flow-video {
+        width: 95%;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    footer {
+        padding: 10px;
+    }
 }
